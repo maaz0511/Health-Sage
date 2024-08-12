@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Health Sage: Dashboard</title>
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS FILE LINK -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- FONTAWESOME LINK -->
+    <script src="https://kit.fontawesome.com/5b55ad7fe0.js" crossorigin="anonymous"></script>
+
+    <!-- BOOTSTRAP JSS LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- JS FILE LINK -->
+    <script src="/static/js/script.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR CODE START-->
+    <nav class="navbar bgclr navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Brand Icon and Name -->
+            <a href="/dashboard" class="navbar-brand mx-5 ">
+                <i class="fa-sharp fa-solid fa-notes-medical fa-lg" style="color: #ffffff;"></i>
+                <b>Health Sage</b>
+            </a>
+
+            <!-- Navigation Toggle Button -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- List Items -->
+            <div class="collapse navbar-collapse mx-5 text-white" id="mynavbar">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li nav-item><a href="/dashboard" class="text-white nav-link navbar_effects"><b>Home</b></a>
+                    </li>
+                    <li nav-item><a href="/about" class="text-white nav-link navbar_effects"><b>About</b></a></li>
+                    <li nav-item><a href="#contact" class="text-white nav-link navbar_effects "><b>Contact
+                                Us</b></a></li>
+                    <li nav-item><a href="/logout" class="text-white nav-link navbar_effects"><b>Logout</b></a></li>
+                    <li nav-item><a href="#" class="text-white nav-link "><b>{{msg}}</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR CODE END-->
+
+    <div class="container-fluid">
+        <!-- FIRST DIV START -->
+
+        <div class="row bgclr">
+            <div class="col-md-8">
+                <h1 class="mx-5 mt-4 fw fw-bolder text-white">Health Sage:<br>Multiple Disease Predictor</h1>
+                <div class="mx-5 my-4 text-white">
+                    <i>
+                        <h4> Your Personalized Disease Prediction Companion
+                        </h4>
+                    </i>
+                </div>
+                <a href="#third_div">
+                    <button class="mx-5 mt-3 btn btn-dark" type="button">Learn More</button>
+                </a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="/static/img/homepage.png" alt="Image Loading" style="height: 20rem;">
+            </div>
+        </div>
+
+        <!-- FIRST DIV END -->
+
+        <!-- SECOND DIV START -->
+
+        <div class="container my-5">
+            <div class="row" >
+                <h3 class="text_center text_shadow mb-5">Our Features & Services</h3>
+
+                <!-- PREDICTION CARD START -->
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+                    <a href="/prediction" style="text-decoration: none;">
+                        <div class="card card_hover" style="width: 20rem;">
+                            <img src="/static/img/prediction.png" class="card-img-top"
+                                style="background-color: #ffffff; width:19rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Disease Predictions</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- PREDICTION CARD END -->
+
+                <!-- INFORMATION CARD START -->
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+                    <a href="/information" style="text-decoration: none;">
+                        <div class="card card_hover" style="width:20rem;">
+                            <img src="/static/img/information.png" class="card-img-top"
+                                style="background-color: #ffffff; width:19rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Disease Information</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- INFORMATION CARD END -->
+
+                <!-- SYMPTOMS CARD START -->
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4 ">
+                    <a href="/symptoms" style="text-decoration: none;">
+                        <div class="card card_hover" style="width:20rem;">
+                            <img src="/static/img/symptos.png" class="card-img-top"
+                                style="background-color: #ffffff; width:19rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Disease Symptoms</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- SYMPTOMS CARD END -->
+            </div>
+
+            <div class="row mt-3">
+
+                <!-- PRECAUTION CARD START -->
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+                    <a href="/precautions" style="text-decoration: none;">
+                        <div class="card card_hover" style="width: 20rem;">
+                            <img src="/static/img/precaution.jpg" class="card-img-top"
+                                style="background-color: #ffffff; width:19.5rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Disease Precautions</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- PRECAUTION CARD END -->
+
+                <!-- BLOOD DONATION CARD START -->
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+                    <a href="/blood_donation" style="text-decoration: none;">
+                        <div class="card card_hover" style="width: 20rem;">
+                            <img src="/static/img/blood_donation.png" class="card-img-top"
+                                style="background-color: #ffffff; width:19rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Donate Blood</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- BLOOD DONATION CARD END-->
+
+                <!-- DISEASE VIDEO START -->
+                <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+                    <a href="/video" style="text-decoration: none;">
+                        <div class="card card_hover" style="width: 20rem;">
+                            <img src="/static/img/videos.jpg" class="card-img-top"
+                                style="background-color: #9e2f2f; width:20rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Disease Videos</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- DISEASE VIDEO END -->
+            </div>
+        </div>
+        <!-- SECOND DIV END -->
+    </div>
+
+    <!-- THIRD DIV START -->
+    <div class="container-fluid bg-dark text-white" id="third_div">
+        <div class="row mx-5">
+            <h2 class="my-5" style="text-shadow:4px 4px 15px #6caaa8;">"Predict Your Health, Prevent Disease: Discover
+                the Power of Machine Learning for
+                Early Detection
+                and Personalized Care."</h2>
+            <div class="card bg-dark text-white mb-5 border-left" style="width: 45rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Early Detection</h5>
+                    <p class="card-text text_style">Health Predictor Hub analyzes your health data and develops
+                        personalized risk
+                        profiles, allowing you
+                        to take proactive measures against potential illness with early detection.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-end mx-5">
+            <div class="card bg-dark text-white mb-5 border-right" style="width: 45rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Increased Accuracy</h5>
+                    <p class="card-text text_style">Through advanced machine learning, our website provides highly
+                        accurate
+                        disease prediction, minimizing the risk of misdiagnosis and unnecessary treatments. Improved
+                        accuracy in disease prediction enables more precise diagnoses and tailored treatment plans,
+                        optimizing patient care.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mx-5">
+            <div class="card bg-dark text-white mb-5 border-left" style="width: 45rem;">
+                <div class="card-body">
+
+                    <h5 class="card-title">Improved Healthcare</h5>
+                    <p class="card-text text_style">Leveraging machine learning, our website aims to revolutionize
+                        healthcare by empowering patients and healthcare providers with data-driven insights. This
+                        leads
+                        to better decision-making, personalized treatment plans, and optimized healthcare outcomes,
+                        ultimately improving the overall quality of care provided to patients.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row d-flex justify-content-end mx-5">
+            <div class="card mb-5 bg-dark text-white mb-5 border-right" style="width: 45rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Cost Savings</h5>
+                    <p class="card-text text_style">Early disease detection and personalized treatment plans can
+                        potentially result in cost savings for healthcare systems and patients. By detecting
+                        diseases at
+                        an early stage, treatment can be initiated sooner, reducing the need for more extensive and
+                        costly interventions later on.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- THIRD DIV END -->
+
+
+
+
+
+    <!-- FOOTER CODE START-->
+    <!-- Footer Section Start -->
+    <div class="row" id="contact">
+        <footer class="text-center text-lg-start text-white" style="background-color: #008080">
+            <section class="">
+                <div class="container text-center text-md-start">
+                    <div class="row mt-4">
+                        <!-- Health Sage Start -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase fw-bold ">Health Sage</h6>
+                            <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: white ; height: 2px" />
+                            <p class="text_style">
+                                Get accurate disease predictions with just a few clicks using our
+                                cutting-edge
+                                machine learning
+                                technology. Our website uses advanced algorithms to analyze your symptoms and medical
+                                history,
+                                providing you with personalized disease predictions to help you make informed decisions
+                                about your
+                                health.
+                            </p>
+                        </div>
+                        <!-- Health Sage End -->
+
+                        <!--Services Start -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mt-3 mx-auto">
+                            <h6 class="text-uppercase fw-bold">Services</h6>
+                            <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: white ; height: 2px" />
+                            <p>
+                                Disease Prediction
+                            </p>
+                            <p>
+                                Disease Information
+                            </p>
+                            <p>
+                                Blood Donation
+                            </p>
+                            <p>
+                            </p>
+                        </div>
+                        <!-- Services End -->
+
+                        <!-- Useful Link Start -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mx-auto">
+                            <h6 class="text-uppercase fw-bold">Useful links</h6>
+                            <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: white; height: 2px" />
+                            <p>
+                                <a href="\dashboard" class="text-white">Home</a>
+                            </p>
+                            <p>
+                                <a href="\about" class="text-white">About</a>
+                            </p>
+                            <p>
+                                <a href="#contact" class="text-white">Conatct</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-white">Help</a>
+                            </p>
+                        </div>
+                        <!-- Useful Link End -->
+
+                        <!-- Contacts Start -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 b-md-0">
+                            <h6 class="text-uppercase fw-bold">Contact</h6>
+                            <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color:white ; height: 2px" />
+                            <p><i class="fas fa-home mr-3"></i> Lucknow, India</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+                        <!-- Contacts End -->
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2023 Copyright:
+                <a class="text-white" href="dashboard.html">Health Sage: Multiple Disease Predictor</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+    </div>
+    <!-- Footer Section End -->
+
+</body>
+
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Health Sage: Disease Symptoms</title>
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS FILE LINKS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
+
+    <!-- FONTAWESOME LINK -->
+    <script src="https://kit.fontawesome.com/5b55ad7fe0.js" crossorigin="anonymous"></script>
+
+    <!-- JSS FILES LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="/static/js/script.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR CODE START-->
+    <nav class="navbar bg-dark fixed-top navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Brand Icon and Name -->
+            <a href="/dashboard" class="navbar-brand mx-5 ">
+                <i class="fa-sharp fa-solid fa-notes-medical fa-lg" style="color: #ffffff;"></i>
+                <b>Health Sage</b>
+            </a>
+
+            <!-- Navigation Toggle Button -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- List Items -->
+            <div class="collapse navbar-collapse mx-5 text-white" id="mynavbar">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li nav-item><a href="/dashboard" class="text-white nav-link navbar_effects me-3"><b>Home</b></a></li>
+                    <li nav-item><a href="/about" class="text-white nav-link navbar_effects me-3"><b>About</b></a></li>
+                    <li nav-item><a href="#contact" class="text-white nav-link navbar_effects me-3"><b>Contact Us</b></a></li>
+                    <li nav-item><a href="/logout" class="text-white nav-link navbar_effects"><b>Logout</b></a></li>
+                    <li nav-item class="text-white nav-link me-3"><b>{{msg}}</b></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR CODE END-->
+
+
+    <!-- SIDE BAR CODE START -->
+    <nav class="navbar nav1 navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5">
+            <div class="font-weight-bold mt-5"><h1>Disease <br>Symptoms</h1></div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3  pl-4" onclick="div1()">Diabetes</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div2()">Heart</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div3()">PCOS</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- SIDE BAR CODE END -->
+
+    <!-- CONTAINER CODE START -->
+    <section class="p-4 my-container mt-2">
+        <button class="btn mt-5" id="menu-btn">Menu</button>
+
+        <!-- diabetes div start -->
+        <div id="diabetes">
+            <h1 class="diabetes-heading">DIABETES</h1>
+
+            <!-- question 1 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="diabetes-text">What are the symptoms of diabetes?</h3>
+                <p>Symptoms of diabetes include:
+                </p>
+                <ul class="ul_design">
+                    <li class="mb-3">Increased thirst (polydipsia) and dry mouth.
+                    </li>
+                    <li class="mb-3">Frequent urination.</li>
+                    <li class="mb-3">Fatigue.</li>
+                    <li class="mb-3">Blurred vision.</li>
+                    <li class="mb-3">Unexplained weight loss.</li>
+                    <li class="mb-3">Numbness or tingling in your hands or feet.</li>
+                    <li class="mb-3">Slow-healing sores or cuts.</li>
+                    <li class="mb-3">Frequent skin and/or vaginal yeast infections.</li>
+                </ul>
+                <p>It’s important to talk to your healthcare provider if you or your child has these
+                    symptoms.
+                </p>
+            </div>
+
+            <!-- question 2 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="diabetes-text">What causes diabetes?
+                </h3>
+                <p>Too much glucose circulating in your bloodstream causes diabetes, regardless of the type.
+                    However, the reason why your blood glucose levels are high differs depending on the type
+                    of diabetes.
+                </p>
+                <p>Causes of diabetes include:
+                </p>
+                <ul class="ul_design">
+                    <li class="mb-3">
+                        <b>Insulin resistance:</b> Type 2 diabetes mainly results from insulin resistance.
+                        Insulin
+                        resistance happens when cells in your muscles, fat and liver don’t respond as they
+                        should to insulin. Several factors and conditions contribute to varying degrees of
+                        insulin resistance, including obesity, lack of physical activity, diet, hormonal
+                        imbalances, genetics and certain medications.
+                    </li>
+                    <li class="mb-3">
+                        <b>Autoimmune disease:</b> Type 1 diabetes and LADA happen when your immune system
+                        attacks
+                        the insulin-producing cells in your pancreas.
+                    </li>
+                    <li class="mb-3">
+                        <b>Hormonal imbalances:</b> During pregnancy, the placenta releases hormones that
+                        cause
+                        insulin resistance. You may develop gestational diabetes if your pancreas can’t
+                        produce enough insulin to overcome the insulin resistance. Other hormone-related
+                        conditions like acromegaly and Cushing syndrome can also cause Type 2 diabetes.
+                    </li>
+                    <li class="mb-3">
+                        <b>Pancreatic damage:</b> Physical damage to your pancreas — from a condition,
+                        surgery or
+                        injury — can impact its ability to make insulin, resulting in Type 3c diabetes.
+                    </li>
+                    <li class="mb-3">
+                        <b>Genetic mutations:</b> Certain genetic mutations can cause MODY and neonatal
+                        diabetes.
+                    </li>
+                </ul>
+                <p>Long-term use of certain medications can also lead to Type 2 diabetes, including HIV/AIDS
+                    medications and corticosteroids.
+                </p>
+            </div>
+
+            <!-- question 3 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="diabetes-text">How is diabetes diagnosed?
+                </h3>
+                <p>Healthcare providers diagnose diabetes by checking your glucose level in a blood test.
+                    Three tests can measure your blood glucose level:
+                </p>
+
+                <ul class="ul_design">
+                    <li class="mb-3">
+                        <b>Fasting blood glucose test:</b> For this test, you don’t eat or drink anything
+                        except
+                        water (fast) for at least eight hours before the test. As food can greatly affect
+                        blood sugar, this test allows your provider to see your baseline blood sugar.
+                    </li>
+                    <li class="mb-3">
+                        <b>Random blood glucose test:</b> “Random” means that you can get this test at any
+                        time,
+                        regardless of if you’ve fasted.
+                    </li>
+                    <li class="mb-3">
+                        <b>A1c:</b> This test, also called HbA1C or glycated hemoglobin test, provides your
+                        average
+                        blood glucose level over the past two to three months.
+                    </li>
+                </ul>
+                <p>To screen for and diagnose gestational diabetes, providers order an oral glucose
+                    tolerance test.
+                </p>
+            </div>
+        </div>
+        <!-- diabetes div end -->
+
+
+        <!-- heart div start -->
+        <div id="heart">
+            <h1 class="heart-heading">Heart</h1>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="heart-text">What are the early warning signs of heart disease?</h3>
+                <p>Heart disease can manifest with various signs and symptoms, and it's important to be aware of the
+                    early warning signs that may indicate an increased risk or the presence of heart disease. Here are
+                    some common early warning signs:
+                </p>
+                <p>
+                    <b>Chest Discomfort:</b> One of the most common early signs of heart disease is chest discomfort or
+                    chest
+                    pain, known as angina. It may feel like pressure, tightness, or a squeezing sensation in the chest.
+                    The discomfort may also extend to the arms, shoulders, neck, jaw, or back.
+                </p>
+                <p>
+                    <b>Shortness of Breath:</b> Feeling breathless or experiencing difficulty breathing, particularly
+                    during
+                    physical activity or exertion, can be an early warning sign of heart disease. It may be accompanied
+                    by a feeling of fatigue or exhaustion.
+                </p>
+                <p>
+                    <b>Fatigue and Weakness:</b> Unexplained fatigue or weakness, even without engaging in strenuous
+                    activities, can be an early symptom of heart disease. The heart's reduced pumping capacity can lead
+                    to reduced oxygen supply to the muscles, causing fatigue.
+                </p>
+                <p>
+                    <b>Rapid or Irregular Heartbeat:</b> Heart palpitations, a sensation of a racing or irregular
+                    heartbeat,
+                    can indicate an underlying heart condition. This may be accompanied by a feeling of fluttering in
+                    the chest.
+                </p>
+                <p>
+                    <b>Dizziness and Fainting:</b> Feeling lightheaded, dizzy, or experiencing fainting episodes can be
+                    a sign
+                    of reduced blood flow to the brain, which may be linked to heart disease. These symptoms should not
+                    be ignored, especially if they occur without any apparent reason.
+                </p>
+                <p>
+                    <b>Swelling:</b> Accumulation of fluid in the legs, ankles, feet, or abdomen, known as edema, can be
+                    an
+                    early sign of heart failure. The heart's reduced ability to pump blood efficiently can cause fluid
+                    retention in the body.
+                </p>
+            </div>
+
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="heart-text">What are the risk factors for heart disease?</h3>
+                <p>Heart disease is influenced by various risk factors, both modifiable and non-modifiable, that can
+                    increase an individual's likelihood of developing the condition. It's important to be aware of these
+                    risk factors to take proactive measures in maintaining heart health. Here are some common risk
+                    factors for heart disease:
+                </p>
+                <p>
+                    <b>High Blood Pressure (Hypertension):</b> Elevated blood pressure forces the heart to work harder,
+                    increasing the strain on the cardiovascular system. Uncontrolled hypertension can damage arteries,
+                    leading to heart disease and other complications.
+                </p>
+                <p>
+                    <b>High Cholesterol Levels:</b> Elevated levels of LDL (bad) cholesterol and low levels of HDL
+                    (good)
+                    cholesterol can lead to the formation of plaque in the arteries, narrowing the blood vessels and
+                    increasing the risk of heart disease.
+                </p>
+                <p>
+                    <b>Diabetes:</b> Individuals with diabetes are at a higher risk of developing heart disease.
+                    Diabetes
+                    affects blood sugar control and increases the risk of other risk factors like high blood pressure
+                    and high cholesterol.
+                </p>
+                <p>
+                    <b>Stress:</b> Chronic stress and excessive emotional burden can contribute to heart disease. Stress
+                    can
+                    lead to unhealthy coping mechanisms such as overeating, smoking, and lack of physical activity.
+                </p>
+                <p>
+                    <b>Unhealthy Diet:</b> Diets high in saturated fats, trans fats, cholesterol, salt, and added sugars
+                    contribute to the development of heart disease. A diet lacking fruits, vegetables, whole grains, and
+                    lean proteins is detrimental to heart health.
+                </p>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="heart-text">How is heart disease diagnosed?</h3>
+                <p>Heart disease is diagnosed through a combination of medical history evaluation, physical
+                    examinations, diagnostic tests, and imaging studies. Here are some common methods used to diagnose
+                    heart disease:
+                </p>
+                <p>
+                    <b>Medical History:</b> The healthcare provider will begin by gathering information about your symptoms,
+                    medical history, family history of heart disease, and any risk factors you may have. Providing
+                    accurate details about your symptoms and lifestyle habits is important for an accurate diagnosis.
+                </p>
+                <p>
+                    <b>Blood Tests:</b> Blood tests can provide important information about your overall health and heart
+                    function. These tests may include lipid profile (cholesterol levels), blood sugar levels (to assess
+                    diabetes risk), and other markers of inflammation and cardiac damage.
+                </p>
+                <p>
+                    <b>Echocardiogram:</b> An echocardiogram uses sound waves (ultrasound) to produce images of the heart's
+                    structure and function. It provides information about the heart's chambers, valves, and pumping
+                    efficiency.
+                </p>
+                <p>
+                    <b>Cardiac Catheterization:</b> This invasive procedure involves inserting a catheter into a blood vessel,
+                    usually in the groin or arm, and threading it to the heart. Contrast dye is injected, allowing the
+                    visualization of the coronary arteries and any blockages or abnormalities.
+                </p>
+                <p>
+                    <b>Physical Examination:</b> A physical examination will be conducted to assess your overall health,
+                    including listening to your heart with a stethoscope to detect any abnormal heart sounds (murmurs)
+                    or irregularities.
+                </p>
+            </div>
+        </div>
+        <!-- heart div end -->
+
+        <!-- pcos div start -->
+        <div id="pcos">
+            <h1 class="pcos-heading">PCOS</h1>
+
+            <!-- question 1 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="pcos-question">What are the signs of polycystic ovary syndrome (PCOS)?
+                </h3>
+                <p>The most common signs and symptoms of PCOS include:
+                </p>
+
+                <ul class="ul_design">
+                    <li class="mb-3"><b>Irregular periods:</b> Abnormal menstruation involves missing
+                        periods or
+                        not having a period at all. It may also involve heavy bleeding during periods.
+                    </li>
+                    <li class="mb-3"><b>Abnormal hair growth:</b> You may grow excess facial hair or
+                        experience
+                        heavy hair growth on your arms, chest and abdomen (hirsutism). This affects up to
+                        70% of people with PCOS.
+                    </li>
+                    <li class="mb-3"><b>Acne:</b> PCOS can cause acne, especially on your back, chest and
+                        face.
+                        This acne may continue past your teenage years and may be difficult to treat.
+                    </li>
+                    <li class="mb-3"><b>Obesity:</b> Between 40% and 80% of people with PCOS have obesity
+                        and have
+                        trouble maintaining a weight that’s healthy for them.
+                    </li>
+                    <li class="mb-3"><b>Darkening of the skin:</b> You may get patches of dark skin,
+                        especially in
+                        the folds of your neck, armpits, groin (between the legs) and under your breasts.
+                        This is known as acanthosis nigricans.
+                    </li>
+                    <li class="mb-3"><b>Cysts:</b> Many people with PCOS have ovaries that appear larger or
+                        with
+                        many follicles (egg sac cysts) on ultrasound.
+                    </li>
+                    <li class="mb-3"><b>Skin tags:</b> Skin tags are little flaps of extra skin. They’re
+                        often
+                        found in your armpits or on your neck.
+                    </li>
+                    <li class="mb-3"><b>Infertility:</b> PCOS is the most common cause of infertility in
+                        people
+                        AFAB. Not ovulating regularly or frequently can result in not being able to
+                        conceive.
+                    </li>
+                </ul>
+            </div>
+            <!-- question 2 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="pcos-question">Can I have PCOS but not have any symptoms?
+                </h3>
+                <p>Yes, it’s possible to have PCOS and not have any symptoms. Many people don’t even realize
+                    they have the condition until they have trouble getting pregnant or are gaining weight
+                    for unknown reasons. It’s also possible to have mild PCOS, where the symptoms aren’t
+                    severe enough for you to notice.
+                </p>
+            </div>
+
+            <!-- question 3 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="pcos-question">Can PCOS cause a miscarriage?
+                </h3>
+                <p>Having PCOS may increase your risk for certain pregnancy complications, although most
+                    women and people AFAB with PCOS are able to successfully carry a pregnancy. Other
+                    complications of PCOS related to pregnancy include increased risk of:
+                </p>
+
+                <ul class="ul_design">
+                    <li class="mb-2">Gestational diabetes, preeclampsia and high blood pressure.
+                    </li>
+                    <li class="mb-2">Preterm birth (birth before 37 weeks of pregnancy) or C-section
+                        delivery due to obesity, diabetes or high blood pressure.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- question 4 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="pcos-question">What is the main cause of PCOS?
+                </h3>
+                <p>The exact cause of PCOS is unknown. There’s evidence that genetics play a role. Several
+                    other factors, most importantly obesity, also play a role in causing PCOS:
+                </p>
+                <ul class="ul_design">
+                    <li class="mb-3"><b>Higher levels of male hormones called androgens:</b> High androgen
+                        levels
+                        prevent your ovaries from releasing eggs, which causes irregular menstrual cycles.
+                        Irregular ovulation can also cause small, fluid-filled sacs to develop on your
+                        ovaries. High androgen also causes acne and excess hair growth in women and people
+                        AFAB.
+                    </li>
+
+                    <li class="mb-3"><b>Insulin resistance:</b> An increase in insulin levels causes your
+                        ovaries
+                        to make and release male hormones (androgens). Increased male hormones suppress
+                        ovulation and contribute to other symptoms of PCOS. Insulin helps your body process
+                        glucose (sugar) and use it for energy. Insulin resistance means your body doesn’t
+                        process insulin correctly, leading to high glucose levels in your blood. Not all
+                        individuals with insulin resistance have elevated glucose or diabetes, but insulin
+                        resistance can lead to diabetes. Having overweight or obesity can also contribute to
+                        insulin resistance. An elevated insulin level, even if your blood glucose is normal,
+                        can indicate insulin resistance.
+                    </li>
+                    <li class="mb-3"><b>Low-grade inflammation:</b> People with PCOS tend to have chronic
+                        low-grade
+                        inflammation. Your healthcare provider can perform blood tests that measure levels
+                        of C-reactive protein (CRP) and white blood cells, which can indicate the level of
+                        inflammation in your body.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- question 5 -->
+            <div class="text_style mx-4 mb-4">
+                <h3 class="pcos-question">How is polycystic ovary syndrome (PCOS) diagnosed?
+                </h3>
+                <p>In most cases, your healthcare provider can diagnose PCOS after an examination and
+                    discussing your symptoms. They may order blood tests or perform an ultrasound to help
+                    with the diagnosis.
+                </p>
+            </div>
+        </div>
+        <!-- pcos div end -->
+
+        <!-- FOOTER CODE START-->
+        <!-- Footer Section Start -->
+        <div class="row" id="contact">
+            <footer class="text-center text-lg-start text-white" style="background-color: #008080">
+                <section class="container-fluid">
+                    <div class=" text-center text-md-start">
+                        <div class="row mt-4">
+                            <!-- Health Sage Start -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase fw-bold ">Health Sage</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p class="text_style">
+                                    Get accurate disease predictions with just a few clicks using our
+                                    cutting-edge
+                                    machine learning
+                                    technology. Our website uses advanced algorithms to analyze your symptoms and
+                                    medical
+                                    history,
+                                    providing you with personalized disease predictions to help you make informed
+                                    decisions
+                                    about your
+                                    health.
+                                </p>
+                            </div>
+                            <!-- Health Sage End -->
+
+                            <!--Services Start -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Services</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p>
+                                    Disease Prediction
+                                </p>
+                                <p>
+                                    Disease Information
+                                </p>
+                                <p>
+                                    Blood Donation
+                                </p>
+                                <p>
+                                </p>
+                            </div>
+                            <!-- Services End -->
+
+                            <!-- Useful Link Start -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white; height: 2px" />
+                                <p>
+                                    <a href="/dashboard" class="text-white">Home</a>
+                                </p>
+                                <p>
+                                    <a href="/about" class="text-white">About</a>
+                                </p>
+                                <p>
+                                    <a href="#contact" class="text-white">Conatct</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Help</a>
+                                </p>
+                            </div>
+                            <!-- Useful Link End -->
+
+                            <!-- Contacts Start -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 b-md-0">
+                                <h6 class="text-uppercase fw-bold">Contact</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color:white ; height: 2px" />
+                                <p><i class="fas fa-home mr-3"></i> Lucknow, India</p>
+                                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Contacts End -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2023 Copyright:
+                    <a class="text-white" href="/dashboard">Health Sage: Multiple Disease Predictor</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+        </div>
+        <!-- Footer Section End -->
+
+    </section>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+        integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+
+    <!-- CONTAINER CODE END -->
+
+</body>
+
+
+</html>

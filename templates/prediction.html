@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Health Sage: Disease Prediction</title>
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS FILE LINKS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
+
+    <!-- FONTAWESOME LINK -->
+    <script src="https://kit.fontawesome.com/5b55ad7fe0.js" crossorigin="anonymous"></script>
+
+    <!-- JSS FILES LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="/static/js/script.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR CODE START-->
+    <nav class="navbar bg-dark fixed-top navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Brand Icon and Name -->
+            <a href="/dashboard" class="navbar-brand mx-5 ">
+                <i class="fa-sharp fa-solid fa-notes-medical fa-lg" style="color: #ffffff;"></i>
+                <b>Health Sage</b>
+            </a>
+
+            <!-- Navigation Toggle Button -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- List Items -->
+            <div class="collapse navbar-collapse mx-5 text-white" id="mynavbar">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li nav-item><a href="/dashboard" class="text-white nav-link navbar_effects me-3"><b>Home</b></a></li>
+                    <li nav-item><a href="/about" class="text-white nav-link navbar_effects me-3"><b>About</b></a></li>
+                    <li nav-item><a href="#contact" class="text-white nav-link navbar_effects me-3"><b>Contact Us</b></a></li>
+                    <li nav-item><a href="/logout" class="text-white nav-link navbar_effects"><b>Logout</b></a></li>
+                    <li nav-item class="text-white nav-link me-3"><b>{{msg}}</b></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR CODE END-->
+
+    <!-- SIDE BAR CODE START -->
+    <nav class="navbar nav1 navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5">
+            <div class="font-weight-bold mt-5">
+                <h1>Disease <br>Prediction</h1>
+            </div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3  pl-4" onclick="div1()">Diabetes</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div2()">Heart</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div3()">PCOS</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- SIDE BAR CODE END -->
+
+    <!-- CONTAINER CODE START -->
+    <section class="p-4 my-container mt-2">
+        <button class="btn mt-5" id="menu-btn">Menu</button>
+
+        <!-- diabetes form -->
+        <div id="diabetes">
+            <h1 class="diabetes-heading">Female Diabetes Prediction</h1>
+
+            <form action="{{ url_for('diabetes') }}" method="post">
+
+                <div class="diabetes-text">
+                    <div class="row mt-4 mb-2">
+
+                        <div class="col-md-4 mt-3">
+                            <h5 class="diabetes-text">Pregnancy: Number of Times Pregnant:</h5>
+                            <input type="text" name="pregnancy" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-4 mt-3">
+                            <h5 class="diabetes-text">Glucose: Glucose Tolerance Test :</h5>
+                            <input type="text" name="glucose" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-4 mt-3">
+                            <h5 class="diabetes-text">Insulin: Serum Insulin (mu U/ml):</h5>
+                            <input type="text" name="insulin" class="form-control border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <h5 class="diabetes-text">BMI: Body Mass Index (weight in kg/(height in m)^2):</h5>
+                            <input type="text" name="bmi" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-6 mt-3">
+                            <h5 class="diabetes-text">Age in Years</h5>
+                            <input type="text" name="age" class="form-control border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mb-4 mt-5">
+                        <button type="submit" class="btn btn-primary">
+                            Prediction
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- diabetes form end-->
+
+        <!-- heart form start -->
+        <div id="heart">
+            <h1 class="heart-heading">Heart Disease Prediction</h1>
+
+            <form action="{{ url_for('heart') }}" method="post">
+
+                <div class="heart-text">
+                    <div class="row mt-4 mb-2">
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Age:</h5>
+                            <input type="text" name="age" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Chest Pain: Yes(1) - No(0)</h5>
+                            <input type="text" name="chestpain" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Blood Pressure:</h5>
+                            <input type="text" name="bloodpressure" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Cholesterol:</h5>
+                            <input type="text" name="cholesterol" class="form-control border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Heart Rate:</h5>
+                            <input type="text" name="heartrate" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Exercise Induced: Yes(1) - No(0)</h5>
+                            <input type="text" name="exercise" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Depression:</h5>
+                            <input type="text" name="depression" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="heart-text">Vessels: 0-3</h5>
+                            <input type="text" name="vessels" class="form-control border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mb-4 mt-5">
+                        <button type="submit" class="btn btn-primary">
+                            Prediction
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- heart form end -->
+
+
+        <!-- PCOS FORM START -->
+        <div id="pcos">
+            <h1 class="pcos-heading">PCOS Prediction</h1>
+
+            <form action="{{ url_for('pcos') }}" method="post">
+
+                <div class="pcos-text">
+                    <div class="row mt-4 mb-2">
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">I beta-HCG(mIU/mL):</h5>
+                            <input type="text" name="v1" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">II beta-HCG(mIU/mL):</h5>
+                            <input type="text" name="v2" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">FSH(mIU/mL):</h5>
+                            <input type="text" name="v3" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">LH(mIU/mL):</h5>
+                            <input type="text" name="v4" class="form-control border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">AMH(ng/mL):</h5>
+                            <input type="text" name="v5" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">Vit D3 (ng/mL):</h5>
+                            <input type="text" name="v6" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">Follicle No. (L):</h5>
+                            <input type="text" name="v7" class="form-control border border-dark">
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <h5 class="pcos-text">Follicle No. (R):</h5>
+                            <input type="text" name="v8" class="form-control border border-dark">
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mb-4 mt-5">
+                        <button type="submit" class="btn btn-primary">
+                            Prediction
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- PCOS FORM END -->
+
+        <!-- FOOTER CODE START-->
+        <!-- Footer Section Start -->
+        <div class="row" id="contact">
+            <footer class="text-center text-lg-start text-white" style="background-color: #008080">
+                <section class="container-fluid">
+                    <div class=" text-center text-md-start">
+                        <div class="row mt-4">
+                            <!-- Health Sage Start -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase fw-bold ">Health Sage</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p class="text_style">
+                                    Get accurate disease predictions with just a few clicks using our
+                                    cutting-edge
+                                    machine learning
+                                    technology. Our website uses advanced algorithms to analyze your symptoms and
+                                    medical
+                                    history,
+                                    providing you with personalized disease predictions to help you make informed
+                                    decisions
+                                    about your
+                                    health.
+                                </p>
+                            </div>
+                            <!-- Health Sage End -->
+
+                            <!--Services Start -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Services</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p>
+                                    Disease Prediction
+                                </p>
+                                <p>
+                                    Disease Information
+                                </p>
+                                <p>
+                                    Blood Donation
+                                </p>
+                                <p>
+                                </p>
+                            </div>
+                            <!-- Services End -->
+
+                            <!-- Useful Link Start -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white; height: 2px" />
+                                <p>
+                                    <a href="/dashboard" class="text-white">Home</a>
+                                </p>
+                                <p>
+                                    <a href="/about" class="text-white">About</a>
+                                </p>
+                                <p>
+                                    <a href="#contact" class="text-white">Conatct</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Help</a>
+                                </p>
+                            </div>
+                            <!-- Useful Link End -->
+
+                            <!-- Contacts Start -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 b-md-0">
+                                <h6 class="text-uppercase fw-bold">Contact</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color:white ; height: 2px" />
+                                <p><i class="fas fa-home mr-3"></i> Lucknow, India</p>
+                                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Contacts End -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2023 Copyright:
+                    <a class="text-white" href="/dashboard">Health Sage: Multiple Disease Predictor</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+        </div>
+        <!-- Footer Section End -->
+
+    </section>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+        integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+
+    <!-- CONTAINER CODE END -->
+
+</body>
+
+
+</html>

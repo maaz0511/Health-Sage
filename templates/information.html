@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Health Sage: Disease Information</title>
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS FILE LINKS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
+
+    <!-- FONTAWESOME LINK -->
+    <script src="https://kit.fontawesome.com/5b55ad7fe0.js" crossorigin="anonymous"></script>
+
+    <!-- JSS FILES LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="/static/js/script.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR CODE START-->
+    <nav class="navbar bg-dark fixed-top navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Brand Icon and Name -->
+            <a href="/dashboard" class="navbar-brand mx-5 ">
+                <i class="fa-sharp fa-solid fa-notes-medical fa-lg" style="color: #ffffff;"></i>
+                <b>Health Sage</b>
+            </a>
+
+            <!-- Navigation Toggle Button -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- List Items -->
+            <div class="collapse navbar-collapse mx-5 text-white" id="mynavbar">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li nav-item><a href="/dashboard" class="text-white nav-link navbar_effects me-3"><b>Home</b></a></li>
+                    <li nav-item><a href="/about" class="text-white nav-link navbar_effects me-3"><b>About</b></a></li>
+                    <li nav-item><a href="#contact" class="text-white nav-link navbar_effects me-3"><b>Contact Us</b></a></li>
+                    <li nav-item><a href="/logout" class="text-white nav-link navbar_effects"><b>Logout</b></a></li>
+                    <li nav-item class="text-white nav-link me-3"><b>{{msg}}</b></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR CODE END-->
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- SIDE BAR CODE START -->
+    <nav class="navbar nav1 navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5">
+            <div class="font-weight-bold mt-5"><h1>Disease <br>Information</h1></div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3  pl-4" onclick="div1()">Diabetes</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div2()">Heart</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div3()">PCOS</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- SIDE BAR CODE END -->
+
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- CONTAINER CODE START -->
+    <section class="p-4 my-container mt-2">
+        <button class="btn mt-5" id="menu-btn">Menu</button>
+
+        <!-- Diabetes Div start -->
+        <div id="diabetes">
+            <h1 class="diabetes-heading">DIABETES</h1>
+            <h2 class="mb-4">"Control diabetes, don't let diabetes control you."</h2>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="diabetes-text">What is Diabetes?</h3>
+                <p>
+                    Diabetes is a condition that happens when your blood sugar (glucose) is too high. It
+                    develops when your pancreas doesn’t make enough insulin or any at all, or when your body
+                    isn’t responding to the effects of insulin properly. Diabetes affects people of all
+                    ages. Most forms of diabetes are chronic (lifelong), and all forms are manageable with
+                    medications and/or lifestyle changes.
+                </p>
+                <p>
+                    Glucose (sugar) mainly comes from carbohydrates in your food and drinks. It’s your
+                    body’s go-to source of energy. Your blood carries glucose to all your body’s cells to
+                    use for energy.
+                </p>
+                <p>
+                    When glucose is in your bloodstream, it needs help — a “key” — to reach its final
+                    destination. This key is insulin (a hormone). If your pancreas isn’t making enough
+                    insulin or your body isn’t using it properly, glucose builds up in your bloodstream,
+                    causing high blood sugar (hyperglycemia).
+                </p>
+                <p>Over time, having consistently high blood glucose can cause health problems, such as
+                    heart disease, nerve damage and eye issues.
+                </p>
+                <p>
+                    The technical name for diabetes is diabetes mellitus. Another condition shares the term
+                    “diabetes” — diabetes insipidus — but they’re distinct. They share the name “diabetes”
+                    because they both cause increased thirst and frequent urination. Diabetes insipidus is
+                    much rarer than diabetes mellitus.
+                </p>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="diabetes-text">What are the types of diabetes?</h3>
+                <p>There are several types of diabetes. The most common forms include:
+                </p>
+
+                <ul class="ul_design">
+                    <li class="mb-3">
+                        <b>Type 2 Diabetes:</b> With this type, your body doesn’t make enough insulin and/or
+                        your
+                        body’s cells don’t respond normally to the insulin (insulin resistance). This is the
+                        most common type of diabetes. It mainly affects adults, but children can have it as
+                        well.
+                    </li>
+                    <li class="mb-3">
+                        <b>Prediabetes:</b> This type is the stage before Type 2 diabetes. Your blood
+                        glucose
+                        levels are higher than normal but not high enough to be officially diagnosed with
+                        Type 2 diabetes.
+                    </li>
+                    <li class="mb-3">
+                        <b>Type 1 Diabetes:</b> This type is an autoimmune disease in which your immune
+                        system
+                        attacks and destroys insulin-producing cells in your pancreas for unknown reasons.
+                        Up to 10% of people who have diabetes have Type 1. It’s usually diagnosed in
+                        children and young adults, but it can develop at any age.
+                    </li>
+                    <li class="mb-3">
+                        <b>Gestational Diabetes:</b> This type develops in some people during pregnancy.
+                        Gestational
+                        diabetes usually goes away after pregnancy. However, if you have gestational
+                        diabetes,
+                        you’re at a higher risk of developing Type 2 diabetes later in life.
+                    </li>
+
+                    <p>Other types of diabetes include:
+
+                    </p>
+
+                    <li class="mb-3">
+                        <b>Type 3c Diabetes:</b> This form of diabetes happens when your pancreas
+                        experiences
+                        damage (other than autoimmune damage), which affects its ability to produce insulin.
+                        Pancreatitis, pancreatic cancer, cystic fibrosis and hemochromatosis can all lead to
+                        pancreas damage that causes diabetes. Having your pancreas removed (pancreatectomy)
+                        also results in Type 3c.
+                    </li>
+                    <li class="mb-3">
+                        <b>Latent Autoimmune Diabetes in Adults (LADA):</b> Like Type 1 diabetes, LADA also
+                        results
+                        from an autoimmune reaction, but it develops much more slowly than Type 1. People
+                        diagnosed with LADA are usually over the age of 30.
+                    </li>
+                    <li class="mb-3">
+                        <b>Maturity-onset Diabetes of the Young (MODY):</b> MODY, also called monogenic
+                        diabetes,
+                        happens due to an inherited genetic mutation that affects how your body makes and
+                        uses insulin. There are currently over 10 different types of MODY. It affects up to
+                        5% of people with diabetes and commonly runs in families.
+                    </li>
+                    <li class="mb-3">
+                        <b>Neonatal Diabetes:</b> This is a rare form of diabetes that occurs within the
+                        first six
+                        months of life. It’s also a form of monogenic diabetes. About 50% of babies with
+                        neonatal diabetes have the lifelong form called permanent neonatal diabetes
+                        mellitus. For the other half, the condition disappears within a few months from
+                        onset, but it can come back later in life. This is called transient neonatal
+                        diabetes mellitus.
+                    </li>
+                    <li class="mb-3">
+                        <b>Brittle Diabetes:</b> Brittle diabetes is a form of Type 1 diabetes that’s marked
+                        by
+                        frequent and severe episodes of high and low blood sugar levels. This instability
+                        often leads to hospitalization. In rare cases, a pancreas transplant may be
+                        necessary to permanently treat brittle diabetes.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="diabetes-text">How common is diabetes?</h3>
+                <p>Diabetes is common. Approximately 37.3 million people in the United States have diabetes,
+                    which is about 11% of the population. Type 2 diabetes is the most common form,
+                    representing 90% to 95% of all diabetes cases.</p>
+                <p>About 537 million adults across the world have diabetes. Experts predict this number will
+                    rise to 643 million by 2030 and 783 million by 2045.
+                </p>
+            </div>
+        </div>
+        <!-- diabetes div end -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- heart div start -->
+        <div id="heart">
+            <h1 class="heart-heading">Heart</h1>
+            <h2 class="mb-4">"Preserve Your Heart's Melody, Prevent Disease"</h2>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="heart-text">What are the risk factors for heart disease?</h3>
+                <p>High blood pressure, high blood cholesterol, and smoking are key risk factors for heart disease.
+                    About half of people in the United States (47%) have at least one of these three risk factors.2
+                    Several other medical conditions and lifestyle choices can also put people at a higher risk for
+                    heart disease, including
+                <ul>
+                    <li>Diabetes</li>
+                    <li> Overweight and obesity</li>
+                    <li> Unhealthy diet</li>
+                    <li> Physical inactivity</li>
+                    <li>Excessive alcohol use</li>
+                </ul>
+                </p>
+                <p>PCOS is one of the most common causes of infertility in women and people assigned female
+                    at birth (AFAB). It can also increase your risk of other health conditions. Your
+                    healthcare provider can treat PCOS based on your symptoms and if you wish to become
+                    pregnant.
+
+                    Coronary artery disease (CAD) is the most common form of heart disease. It occurs when the arteries
+                    that supply blood to the heart muscle become narrowed or blocked due to the buildup of plaque, a
+                    fatty substance. This can restrict blood flow to the heart, leading to chest pain (angina), heart
+                    attacks, or other complications.
+                </p>
+                <p>
+                    Heart failure occurs when the heart is unable to pump blood effectively, resulting in inadequate
+                    blood supply to meet the body's needs. It can be caused by conditions such as CAD, high blood
+                    pressure, or heart muscle damage.
+                </p>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="heart-text">How common is heart disease?</h3>
+                <p>Heart disease kills more people in the United States than any other disease. In 2020, heart disease
+                    caused 1 in 5 deaths. That’s nearly 700,000 people. Coronary artery disease, the most common type of
+                    heart disease, caused about 380,000 of those deaths.
+                </p>
+                <p>
+                    Heart disease is a significant global health concern and one of the leading causes of death
+                    worldwide. Its prevalence varies among countries and populations, but it affects millions of people
+                    globally. Here are some key statistics regarding the prevalence of heart disease:
+                </p>
+                <p>
+                    <b>Global Burden:</b> According to the World Health Organization (WHO), cardiovascular diseases,
+                    including
+                    heart disease, account for nearly 18 million deaths worldwide each year, representing 31% of all
+                    global deaths.
+                </p>
+                <p>
+                    <b>Leading Cause of Death:</b> Heart disease is the leading cause of death in many countries,
+                    including the
+                    United States, Europe, and most developed nations. It surpasses other major causes such as cancer,
+                    respiratory diseases, and infectious diseases.
+                </p>
+                <p>
+                    <b>Regional Variations:</b> The prevalence of heart disease can vary significantly across regions.
+                    Developed countries tend to have higher rates of heart disease due to factors like aging
+                    populations, sedentary lifestyles, unhealthy diets, and higher rates of obesity and smoking.
+                </p>
+                <p>
+                    <b>Risk Factors:</b> The increasing prevalence of heart disease is closely linked to risk factors
+                    such as
+                    high blood pressure, high cholesterol, smoking, obesity, diabetes, and unhealthy lifestyle choices.
+                    These risk factors are often modifiable through preventive measures and lifestyle changes.
+                </p>
+                <p>
+                    <b>Impact on Developing Countries:</b> While heart disease has historically been associated with
+                    developed
+                    countries, it is also becoming a major concern in developing nations. Rapid urbanization, changes in
+                    lifestyle, and shifts in dietary habits contribute to an increased risk of heart disease in these
+                    regions.
+                </p>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="heart-text">How does heart disease affect my body?</h3>
+                <p>When your heart isn’t working well, it has trouble sending enough blood to your body. Your blood
+                    brings oxygen and nutrients to your body’s organs, tissues and cells. If they can’t get what they
+                    need, it’s harder for them to function. In a way, your heart delivers the fuel that keeps your
+                    body’s systems running. If there’s a problem with delivering that fuel, it affects everything your
+                    body’s systems do.
+                </p>
+
+                <p>Heart disease can have significant impacts on the body, affecting various organs and bodily
+                    functions. Here are some ways in which heart disease can affect the body:</p>
+
+                <p><b>Reduced Blood Flow:</b> Heart disease, such as coronary artery disease, can lead to narrowed or
+                    blocked
+                    arteries, reducing blood flow to the heart muscle. This can cause symptoms such as chest pain
+                    (angina) or shortness of breath, particularly during physical exertion.</p>
+
+                <p><b>Impaired Heart Function:</b> Heart disease can weaken the heart muscle, leading to impaired
+                    pumping
+                    ability. This can result in heart failure, where the heart cannot adequately supply the body's
+                    organs and tissues with oxygenated blood. Symptoms of heart failure include fatigue, swelling in the
+                    legs and ankles, and difficulty breathing.</p>
+
+                <p><b>Arrhythmias:</b> Certain heart diseases can disrupt the heart's electrical system, causing
+                    abnormal heart
+                    rhythms or arrhythmias. This can result in a rapid heartbeat (tachycardia), slow heartbeat
+                    (bradycardia), or irregular heartbeat. Arrhythmias can cause palpitations, dizziness, fainting, and
+                    in severe cases, can lead to complications like stroke or cardiac arrest.</p>
+
+                <p><b>Increased Risk of Blood Clots:</b> Heart disease can increase the risk of blood clots forming
+                    within the
+                    blood vessels. Blood clots can partially or completely block blood flow, leading to serious
+                    complications such as heart attack or stroke.</p>
+
+                <p><b>Organ Damage:</b> Inadequate blood supply due to heart disease can affect various organs and
+                    tissues,
+                    leading to their dysfunction or damage. Organs such as the kidneys, liver, and lungs may be
+                    particularly vulnerable to the reduced blood flow and oxygenation.</p>
+            </div>
+        </div>
+        <!-- heart div end -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Pcos div start -->
+        <div id="pcos">
+            <h1 class="pcos-heading">PCOS</h1>
+            <h2 class="mb-4"> "Raising awareness, fighting for a cure: PCOS warriors unite!"</h2>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="pcos-text">What is Polycystic Ovarian Syndrome?</h3>
+                <p>Polycystic ovary syndrome (PCOS) is a hormonal imbalance that occurs when your ovaries
+                    (the organ that produces and releases eggs) create excess hormones. If you have PCOS,
+                    your ovaries produce unusually high levels of hormones called androgens. This causes
+                    your reproductive hormones to become imbalanced. As a result, people with PCOS often
+                    have irregular menstrual cycles, missed periods and unpredictable ovulation. Small
+                    follicle cysts (fluid-filled sacs with immature eggs) may be visible on your ovaries on
+                    ultrasound due to lack of ovulation (anovulation). However, despite the name
+                    "polycystic," you don’t need to have cysts on your ovaries to have PCOS. The ovarian
+                    cysts aren’t dangerous or painful.
+                </p>
+                <p>PCOS is one of the most common causes of infertility in women and people assigned female
+                    at birth (AFAB). It can also increase your risk of other health conditions. Your
+                    healthcare provider can treat PCOS based on your symptoms and if you wish to become
+                    pregnant.
+                </p>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="pcos-text">What age does PCOS start?</h3>
+                <p>Women and people AFAB can get PCOS any time after puberty. Most people are diagnosed in
+                    their 20s or 30s when they’re trying to get pregnant. You may have a higher chance of
+                    getting PCOS if you have obesity or if other people in your biological family have PCOS.
+                    PCOS typically emerges between the ages of 15 and 30, with most women being diagnosed in their late
+                    teens or early twenties. However, PCOS can also occur in adolescence, and some girls may experience
+                    signs and symptoms as early as their first menstrual period.
+                </p>
+                <p>
+                    It is important to note that the diagnosis of PCOS is not solely based on age but requires the
+                    presence of specific criteria. These criteria include irregular menstrual cycles, elevated levels of
+                    male hormones (androgens), and the presence of polycystic ovaries on ultrasound. Additionally, other
+                    symptoms such as acne, excessive hair growth (hirsutism), weight gain, and fertility issues may also
+                    be present.
+
+                </p>
+                <p>
+
+                    PCOS is a complex hormonal disorder, and its exact cause is not fully understood. It is believed to
+                    involve a combination of genetic, environmental, and hormonal factors. While the symptoms may start
+                    during adolescence or early adulthood, PCOS can persist throughout a woman's reproductive years and
+                    may continue to pose challenges related to menstrual irregularities, fertility issues, and metabolic
+                    health.
+                </p>
+                <p>
+                    If you suspect you may have PCOS or are experiencing symptoms associated with the condition, it is
+                    recommended to consult with a healthcare professional who can evaluate your symptoms, perform
+                    appropriate diagnostic tests, and provide guidance on management and treatment options.
+                </p>
+            </div>
+
+            <div class="mx-4 mb-4 text_style">
+                <h3 class="pcos-text">How common is PCOS?</h3>
+                <p>PCOS is very common — up to 15% of women and people AFAB of reproductive age have PCOS.
+                </p>
+
+                <p>
+                    Polycystic ovary syndrome (PCOS) is a common hormonal disorder that affects a significant number of
+                    women of reproductive age. Here are some key statistics regarding the prevalence of PCOS:
+                </p>
+                <p>
+                    <b>Global Prevalence: </b> The exact prevalence of PCOS varies across different populations and geographical
+                    regions. According to estimates by the World Health Organization (WHO), PCOS affects 5% to 15% of
+                    women worldwide.
+                </p>
+                <p>
+                    <b>Most Common Endocrine Disorder in Women:</b> PCOS is recognized as the most common endocrine disorder in
+                    women of reproductive age. It is a leading cause of menstrual irregularities, infertility, and
+                    hormonal imbalances.
+                </p>
+                <p>
+                    <b>Underdiagnosed Condition: </b> Despite its prevalence, PCOS remains underdiagnosed in many cases. Some
+                    women may experience symptoms without seeking medical attention or receiving a proper diagnosis.
+                    Lack of awareness among both patients and healthcare providers contributes to underdiagnosis.
+                </p>
+                <p>
+                    <b>Impact on Fertility: </b> PCOS is a significant cause of female infertility. It is estimated that 70% to
+                    80% of women with PCOS experience ovulation-related infertility. The condition can affect the
+                    regular release of eggs from the ovaries, leading to difficulties in conception.
+                </p>
+                <p>
+                    <b>Associated Health Risks:</b> PCOS is often associated with various metabolic and cardiovascular risks.
+                    Women with PCOS have a higher likelihood of developing insulin resistance, obesity, type 2 diabetes,
+                    high blood pressure, dyslipidemia (abnormal lipid levels), and cardiovascular disease. These risks
+                    highlight the importance of managing PCOS comprehensively and addressing related health concerns.
+                </p>
+                <p>
+                    <b>Impact on Quality of Life:</b> PCOS can significantly impact a woman's quality of life due to the
+                    physical and emotional symptoms it presents. Symptoms such as menstrual irregularities, excessive
+                    hair growth (hirsutism), acne, weight gain, and mood disturbances can affect self-esteem, body
+                    image, and overall well-being.
+                </p>
+            </div>
+        </div>
+        <!-- pcos div end -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- FOOTER CODE START-->
+        <!-- Footer Section Start -->
+        <div class="row" id="contact">
+            <footer class="text-center text-lg-start text-white" style="background-color: #008080">
+                <section class="container-fluid">
+                    <div class=" text-center text-md-start">
+                        <div class="row mt-4">
+                            <!-- Health Sage Start -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase fw-bold ">Health Sage</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p class="text_style">
+                                    Get accurate disease predictions with just a few clicks using our
+                                    cutting-edge
+                                    machine learning
+                                    technology. Our website uses advanced algorithms to analyze your symptoms and
+                                    medical
+                                    history,
+                                    providing you with personalized disease predictions to help you make informed
+                                    decisions
+                                    about your
+                                    health.
+                                </p>
+                            </div>
+                            <!-- Health Sage End -->
+
+                            <!--Services Start -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Services</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p>
+                                    Disease Prediction
+                                </p>
+                                <p>
+                                    Disease Information
+                                </p>
+                                <p>
+                                    Blood Donation
+                                </p>
+                                <p>
+                                </p>
+                            </div>
+                            <!-- Services End -->
+
+                            <!-- Useful Link Start -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white; height: 2px" />
+                                <p>
+                                    <a href="/dashboard" class="text-white">Home</a>
+                                </p>
+                                <p>
+                                    <a href="/about" class="text-white">About</a>
+                                </p>
+                                <p>
+                                    <a href="#contact" class="text-white">Conatct</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Help</a>
+                                </p>
+                            </div>
+                            <!-- Useful Link End -->
+
+                            <!-- Contacts Start -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 b-md-0">
+                                <h6 class="text-uppercase fw-bold">Contact</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color:white ; height: 2px" />
+                                <p><i class="fas fa-home mr-3"></i> Lucknow, India</p>
+                                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Contacts End -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2023 Copyright:
+                    <a class="text-white" href="/dashboard">Health Sage: Multiple Disease Predictor</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+        </div>
+        <!-- Footer Section End -->
+
+    </section>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+        integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+
+    <!-- CONTAINER CODE END -->
+
+</body>
+
+
+</html>

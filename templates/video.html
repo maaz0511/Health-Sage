@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Health Sage: Disease Videos</title>
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS FILE LINKS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
+
+    <!-- FONTAWESOME LINK -->
+    <script src="https://kit.fontawesome.com/5b55ad7fe0.js" crossorigin="anonymous"></script>
+
+    <!-- JSS FILES LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+     <!-- JAVASCRIPT FILES LINKS -->
+    <script src="/static/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+        integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVBAR CODE START-->
+    <nav class="navbar bg-dark fixed-top navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <!-- Brand Icon and Name -->
+            <a href="/dashboard" class="navbar-brand mx-5 ">
+                <i class="fa-sharp fa-solid fa-notes-medical fa-lg" style="color: #ffffff;"></i>
+                <b>Health Sage</b>
+            </a>
+
+            <!-- Navigation Toggle Button -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- List Items -->
+            <div class="collapse navbar-collapse mx-5 text-white" id="mynavbar">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li nav-item><a href="/dashboard" class="text-white nav-link navbar_effects me-3"><b>Home</b></a></li>
+                    <li nav-item><a href="/about" class="text-white nav-link navbar_effects me-3"><b>About</b></a></li>
+                    <li nav-item><a href="#contact" class="text-white nav-link navbar_effects me-3"><b>Contact Us</b></a></li>
+                    <li nav-item><a href="/logout" class="text-white nav-link navbar_effects"><b>Logout</b></a></li>
+                    <li nav-item class="text-white nav-link me-3"><b>{{msg}}</b></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR CODE END-->
+
+    <!-- SIDE BAR CODE START -->
+    <nav class="navbar nav1 navbar-expand d-flex flex-column align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5">
+            <div class="font-weight-bold mt-5"><h1>Video<br>Lectures</h1></div>
+        </a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3  pl-4" onclick="div1()">Diabetes</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div2()">Heart</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light ps-3 pl-4" onclick="div3()">PCOS</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- SIDE BAR CODE END -->
+
+
+    <!-- CONTAINER CODE STARTS   -->
+    <section class="p-4 my-container mt-2">
+        <button class="btn mt-5" id="menu-btn">Menu</button>
+
+        <!-- diabetes section starts -->
+        <div id="diabetes">
+            <h1 class="diabetes-heading">Female Diabetes</h1>
+
+            <!-- VIDEO 1 -->
+            <div class="row mt-5 diabetes-text">
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">What Is Diabetes? | 2 Minute Guide | Diabetes UK</h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe src="https://www.youtube.com/embed/wZAjVQWbMlE" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- VIDEO 2 -->
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">U-M Type 1 Diabetes 101 | Module 1 | What is Diabetes?
+                    </h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q6rLXPJ6j_I"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3 -->
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">Diabetes Type 1 and Type 2, Animation</h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XfyGv-xwjlI"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- diabetes section ends -->
+
+        <!-- heart section starts -->
+        <div id="heart">
+            <h1 class="heart-heading">Heart</h1>
+
+            <!-- video 1 -->
+            <div class="row mt-5 heart-text">
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">What happens during a heart attack?</h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3_PYnWVoUzM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- video 2 -->
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">How to Treat Heart Attack
+                    </h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QllguanpKic"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- video 3 -->
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">How Heart Disease Develops</h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hIvmjPafaFg"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- heart section ends -->
+
+
+        <!-- pcos sections starts-->
+        <div id="pcos">
+            <h1 class="pcos-heading">PCOS</h1>
+
+            <!-- video 1 -->
+            <div class="row mt-5 pcos-text">
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">Polycystic Ovarian Disease (PCOD/PCOS)</h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YHOT4lPh1mY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- video 2 -->
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">What is Polycystic Ovary Syndrome (PCOS) | 3D Guide
+                    </h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/etYDoNb4QWA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- video 3 -->
+                <div class="col-md-12">
+                    <h1 class="d-flex justify-content-center">PCOS is more than just a medical condition</h1>
+                    <div class="col-md-12 mb-5 border border-dark ratio ratio-21x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hwq8x41KML0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pcos section ends-->
+
+
+        <!-- Footer Section Start -->
+        <div class="row" id="contact">
+            <footer class="text-center text-lg-start text-white" style="background-color: #008080">
+                <section class="container-fluid">
+                    <div class=" text-center text-md-start">
+                        <div class="row mt-4">
+                            <!-- Health Sage Start -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase fw-bold ">Health Sage</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p class="text_style">
+                                    Get accurate disease predictions with just a few clicks using our
+                                    cutting-edge
+                                    machine learning
+                                    technology. Our website uses advanced algorithms to analyze your
+                                    symptoms
+                                    and
+                                    medical
+                                    history,
+                                    providing you with personalized disease predictions to help you make
+                                    informed
+                                    decisions
+                                    about your
+                                    health.
+                                </p>
+                            </div>
+                            <!-- Health Sage End -->
+
+                            <!--Services Start -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Services</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white ; height: 2px" />
+                                <p>
+                                    Disease Prediction
+                                </p>
+                                <p>
+                                    Disease Information
+                                </p>
+                                <p>
+                                    Blood Donation
+                                </p>
+                                <p>
+                                </p>
+                            </div>
+                            <!-- Services End -->
+
+                            <!-- Useful Link Start -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mx-auto">
+                                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: white; height: 2px" />
+                                <p>
+                                    <a href="/dashboard" class="text-white">Home</a>
+                                </p>
+                                <p>
+                                    <a href="/about" class="text-white">About</a>
+                                </p>
+                                <p>
+                                    <a href="#contact" class="text-white">Conatct</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Help</a>
+                                </p>
+                            </div>
+                            <!-- Useful Link End -->
+
+                            <!-- Contacts Start -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 b-md-0">
+                                <h6 class="text-uppercase fw-bold">Contact</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color:white ; height: 2px" />
+                                <p><i class="fas fa-home mr-3"></i> Lucknow, India</p>
+                                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Contacts End -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2023 Copyright:
+                    <a class="text-white" href="/dashboard">Health Sage: Multiple Disease Predictor</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+        </div>
+        <!-- Footer Section End -->
+
+    </section>
+
+
+      <!-- CONTAINER CODE ENDS -->
+
+    <!-- custom js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+
+</body>
+
+
+</html>

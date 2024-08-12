@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Bacasime Antique', serif;    /* overflow-y: scroll; */
+}
+
+
+.card_hover {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card_hover:hover {
+    transform: translateY(-5px);
+    border-bottom: 5px solid #6caaa8;
+
+}
+
+/* background color */
+.bgclr {
+    background-color: #008080;
+}
+
+/* navbar effects */
+.navbar_effects:hover {
+    background-color: #19376D;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Border left onn dashboard third div*/
+.border-left {
+    border: 1px solid #6caaa8;
+    border-radius: 20px 20px 0px 20px;
+    box-shadow: 1px 1px 15px #6caaa8;
+}
+
+.border-right {
+    border: 1px solid #6caaa8;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 1px 1px 15px #6caaa8;
+}
+
+/* Center the text */
+.text_center {
+    text-align: center;
+}
+
+/* color of text */
+.text_color {
+    color: #008080;
+}
+
+/* justify of the text */
+.text_style {
+    text-align: justify;
+}
+
+/* text_shadow */
+.text_shadow {
+    font-weight: bold;
+    color: #008080;
+}
+
+
+/* Slogan heading */
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Questions Heading */
+
+.diabetes-text{
+    color: #0073c6;
+    font-weight: bold;
+}
+
+.diabetes-heading{
+text-align: center;
+font-weight: bold;
+color: #0073c6;
+}
+
+
+.heart-text {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.heart-heading {
+    text-align: center;
+font-weight: bold;
+    color: #ff0000;
+
+}
+
+.pcos-text {
+    color: #008080;
+    font-weight: bold;
+}
+
+.pcos-heading {
+    text-align: center;
+    font-weight: bold;
+    color: #008080;
+
+}
+
+

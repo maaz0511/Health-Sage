@@ -12,9 +12,6 @@ app = Flask(__name__, template_folder="templates")
 def homepage():
     return render_template("dashboard.html")
 
-
-
-
 model1 = pickle.load(open("diabetes.pkl","rb"))
 model2 = pickle.load(open("heart.pkl","rb"))
 model3 = pickle.load(open("pcos.pkl","rb"))
@@ -77,16 +74,14 @@ def diabetes():
       var1 = model1.predict(arr1)
 
       if var1>0.75:
-          if g.user:
-            res1= "You are probable of getting affected. Kindly seek medical advice."
-            return render_template("diab_result.html",pregnancy=d1, glucose=d2, insulin=d3, bmi=d4, age=d5, result=res1, mess=var1)   
-          return redirect("/loginpage")
+        res1= "You are probable of getting affected. Kindly seek medical advice."
+        return render_template("diab_result.html",pregnancy=d1, glucose=d2, insulin=d3, bmi=d4, age=d5, result=res1, mess=var1)   
+          
           
       else:
-          if g.user:
-            res1 = "You are less probable of getting affected."
-            return render_template("diab_result.html",pregnancy=d1, glucose=d2, insulin=d3, bmi=d4, age=d5, result=res1, mess=var1)   
-          return redirect("/loginpage")
+        res1 = "You are less probable of getting affected."
+        return render_template("diab_result.html",pregnancy=d1, glucose=d2, insulin=d3, bmi=d4, age=d5, result=res1, mess=var1)   
+          
                
 # heart prediction
 @app.route("/predict/heart", methods=['POST'])

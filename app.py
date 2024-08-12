@@ -1,7 +1,8 @@
 import os
 import pickle 
 import numpy as np
-from flask import Flask, render_template, request, url_for, session, redirect,redirect,g, request
+from flask import Flask, render_template, request, redirect
+from werkzeug.urls import url_quote
 
 app = Flask(__name__, template_folder="templates")
 
